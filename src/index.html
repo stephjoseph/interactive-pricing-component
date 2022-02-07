@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../dist/style.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body class="font-['Manrope'] xl:bg-[#F9FAFF]">
+    <header
+      class="flex h-[25rem] w-full flex-col items-center rounded-bl-[191.5px] bg-[#F1F5FE] px-[6.4vw] pt-[3.563rem] text-center xl:h-[28.063rem]"
+    >
+      <div
+        class="relative flex h-[9.063rem] w-[20.375rem] flex-col items-center gap-2 bg-[url('../images/pattern-circles.svg')] bg-contain bg-[center_center] bg-no-repeat pt-8 xl:w-[24.688rem] xl:gap-[0.75rem] xl:pt-[2.313rem]"
+      >
+        <h1
+          class="text-xl font-extrabold leading-[1.688rem] tracking-normal text-[#293356] xl:text-[1.75rem] xl:leading-[2.375rem]"
+        >
+          Simple, traffic-based pricing
+        </h1>
+        <p
+          class="text-[0.813rem] font-semibold leading-[1.438rem] tracking-normal text-[#848EAD] xl:text-[0.938rem] xl:leading-[1.25rem]"
+        >
+          Sign-up for our 30-day trial. <br class="xl:hidden" />
+          No credit card required.
+        </p>
+      </div>
+    </header>
+    <main
+      class="relative z-10 mx-auto mb-[88px] mt-[-10.375rem] h-auto w-[20.438rem] rounded-[8px] bg-white shadow-[0_20px_30px_-5px_rgba(127,137,185,0.1521)] xl:mt-[-11.438rem] xl:w-[33.75rem]"
+    >
+      <div
+        class="flex h-auto w-full flex-col gap-[2.063rem] px-[1.5rem] pt-[2.125rem] pb-[2.375rem] xl:relative xl:gap-10 xl:px-12 xl:py-10"
+      >
+        <div
+          class="flex flex-col items-center gap-[1.563rem] xl:items-start xl:gap-10"
+        >
+          <p
+            class="mt-[1.125rem] text-[0.75rem] font-extrabold uppercase leading-4 tracking-[1.71px] text-[#848EAD] xl:text-[0.875rem] xl:leading-[1.188rem] xl:tracking-[2px]"
+          >
+            <span id="page-views">100k</span> pageviews
+          </p>
+          <label class="flex h-10 w-full items-center">
+            <input
+              type="range"
+              id="slider"
+              name="slider"
+              min="0"
+              max="4"
+              step="1"
+              value="2"
+            />
+          </label>
+
+          <p
+            class="flex items-center gap-[0.625rem] text-[0.875rem] font-semibold leading-[1.188rem] tracking-normal text-[#848EAD] xl:absolute xl:top-10 xl:right-10 xl:text-base xl:leading-[1.375rem]"
+          >
+            <span>
+              <span
+                class="text-[2rem] font-extrabold leading-[2.75rem] tracking-[-0.8px] text-[#293356] xl:text-[2.5rem] xl:leading-[3.438rem]"
+                >$</span
+              ><span
+                id="price-amount"
+                class="text-[2rem] font-extrabold leading-[2.75rem] tracking-[-0.8px] text-[#293356] xl:text-[2.5rem] xl:leading-[3.438rem]"
+                >16.00</span
+              >
+            </span>
+
+            / month
+          </p>
+        </div>
+        <div
+          class="ml-[1.25rem] flex w-[17rem] items-center gap-[0.75rem] xl:ml-[6.625rem] xl:w-[20.063rem] xl:gap-4"
+        >
+          <p
+            class="text-xs font-semibold leading-4 tracking-normal text-[#848EAD]"
+          >
+            Monthly Billing
+          </p>
+          <label class="relative h-[1.375rem] w-[2.688rem]">
+            <input
+              class="peer h-0 w-0 opacity-0"
+              type="checkbox"
+              id="checkbox"
+            />
+            <span
+              class="absolute top-0 left-0 h-full w-full cursor-pointer rounded-[15px] bg-[#CFD8EF] duration-[0.4s] before:absolute before:top-[4px] before:left-[4px] before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:duration-[0.4s] peer-checked:bg-[#7AEADF] peer-checked:before:translate-x-[1.375rem]"
+              id="buttonID"
+            ></span>
+          </label>
+          <div class="flex items-center gap-[0.313rem]">
+            <p
+              class="text-xs font-semibold leading-4 tracking-normal text-[#848EAD]"
+            >
+              Yearly Billing
+            </p>
+            <p
+              class="rounded-[9.5px] bg-[#FEEDE8] px-[0.469rem] py-[0.125rem] text-[0.625rem] font-extrabold leading-[0.875rem] tracking-normal text-[#FF8D68] xl:px-[0.375rem]"
+            >
+              <span class="xl:hidden">-</span>25%
+              <span class="hidden xl:inline">discount</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="h-px w-full text-[#ECF0FB]" />
+      <div
+        class="flex flex-col items-center gap-8 px-6 pb-8 pt-6 xl:flex-row xl:justify-between xl:px-12 xl:py-8"
+      >
+        <div class="flex flex-col items-center gap-[0.625rem] xl:items-start">
+          <div class="flex items-center gap-4">
+            <div>
+              <img src="../images/icon-check.svg" alt="" />
+            </div>
+            <p
+              class="text-[0.75rem] font-semibold leading-4 tracking-normal text-[#848EAD]"
+            >
+              Unlimited Websites
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div>
+              <img src="../images/icon-check.svg" alt="" />
+            </div>
+            <p
+              class="text-[0.75rem] font-semibold leading-4 tracking-normal text-[#848EAD]"
+            >
+              100% data ownership
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div>
+              <img src="../images/icon-check.svg" alt="" />
+            </div>
+            <p
+              class="text-[0.75rem] font-semibold leading-4 tracking-normal text-[#848EAD]"
+            >
+              Email reports
+            </p>
+          </div>
+        </div>
+        <a
+          class="flex h-[2.563rem] w-[10.625rem] items-center justify-center rounded-[20.5px] bg-[#293356] px-[2.875rem] py-[0.75rem] text-[0.75rem] font-extrabold leading-4 tracking-normal text-[#BECDFF] hover:text-white active:text-white"
+          href=""
+          aria-label="Start my trial"
+          >Start my trial</a
+        >
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
